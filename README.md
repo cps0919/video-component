@@ -1,6 +1,6 @@
 ### 安装
-video-component  
-@easydarwin/easywasmplayer  
+npm install video-component --save   
+npm install @easydarwin/easywasmplayer  --save
 
 
 ### 引入包
