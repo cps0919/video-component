@@ -5,4 +5,4 @@ declare module '*.vue' {
   export default component
 }
 
-declare module '@cps0919/direction'
+declare module 'video-component'

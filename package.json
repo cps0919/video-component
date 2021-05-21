@@ -15,6 +15,7 @@
     "@easydarwin/easywasmplayer": "^4.0.12",
     "core-js": "^3.6.5",
     "sass-loader": "^11.1.1",
+    "video-component": "^1.0.0",
     "vue": "^3.0.0"
   },
   "devDependencies": {

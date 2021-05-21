@@ -1,8 +1,9 @@
 import { createApp } from 'vue'
 import App from './App.vue'
 
-import plugins from './plugins/index'
+import videoComponent from 'video-component'
+import "video-component/index.css"
 
 const app = createApp(App)
-app.use(plugins)
+app.use(videoComponent)
 app.mount('#app')
