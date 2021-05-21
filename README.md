@@ -1,7 +1,7 @@
-### 依赖包
+### 安装
+video-component  
 @easydarwin/easywasmplayer  
 
-vue2.x 或 vue3.x  
 
 ### 引入包
 import videoComponent from 'video-component'  
