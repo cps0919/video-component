@@ -1,17 +1,18 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div>
+    <direction />
+
+    <div style="height: 500px; width: 1000px">
+      <more-video :src="'ws://10.0.60.168:80/rtp/000000CE.flv'" equipData="''" :model="1"> </more-video>
+    </div>
+  </div>
 </template>
 
-<script>
-import HelloWorld from './components/HelloWorld.vue'
-
-export default {
-  name: 'App',
-  components: {
-    HelloWorld
-  }
-}
+<script lang="ts">
+import { defineComponent } from "vue";
+export default defineComponent({
+  name: "App",
+});
 </script>
 
 <style>
