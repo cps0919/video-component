@@ -3,9 +3,6 @@
     <div style="height: 500px; width: 1000px">
       <more-video :src="src" equipData="equipData" :model="model"> </more-video>
     </div>
-    <div style="height: 500px; width: 1000px;margin:50px">
-      <direction></direction>
-    </div>
   </div>
 </template>
 

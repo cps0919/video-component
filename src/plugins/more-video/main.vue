@@ -87,7 +87,6 @@ export default {
   mounted() {
     if (this.src) {
       this.player(this.acVideo, this.src, this.equipData);
-
     }
     //初始化窗口个数
     if (this.model == 1) {
@@ -174,7 +173,9 @@ export default {
               logo: false,
               openAudio: false,
               live: true,
-              timeout: 2,
+              cfKbs: (e) => {
+                this.cfKbs(e, acVideo);
+              },
             }
           );
           this.videoSrcList[acVideo].play(src, 1);
@@ -183,11 +184,23 @@ export default {
         }
       });
     },
+
     callbackfun(e) {
       try {
         console.log(e);
       } catch (error) {
         console.log(error);
+      }
+    },
+    cfKbs(e, acVideo) {
+      if (
+        e.averageKbs == 0 &&
+        e.averageKbps == 0 &&
+        e.currentKbps == 0 &&
+        e.currentKbs == 0
+      ) {
+        this.videoSrcList[acVideo].pause();
+        this.videoSrcList[acVideo].destroy();
       }
     },
     // //回调函数
