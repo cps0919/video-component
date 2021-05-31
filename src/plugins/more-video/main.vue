@@ -201,6 +201,17 @@ export default {
       ) {
         this.videoSrcList[acVideo].pause();
         this.videoSrcList[acVideo].destroy();
+        let videoHtml = document.getElementById(`videoElement${acVideo}`);
+        let span = document.createElement("span");
+        span.style.position = "absolute";
+        span.style.left = "50%";
+        span.style.top = "50%";
+        span.style.transform = "translate(-60%,-50%)";
+        span.style.color = "#9999";
+        span.style.fontSize = "14px";
+        span.className = "iconfont icon-shipin";
+        span.innerHTML = "&ensp;播放失败";
+        videoHtml.appendChild(span);
       }
     },
     // //回调函数
@@ -358,6 +369,7 @@ export default {
   height: 100%;
   width: 100%;
   background: black;
+  position: relative;
 }
 .acIcon {
   color: rgba(69, 162, 255, 1) !important;
